@@ -1,21 +1,50 @@
-Este projeto foi desenvolvido para realizar a soma dos comprovantes de pagamento Pix enviados em um chat do Telegram.
-
 Instruções de Configuração e Uso
 
 Token do Bot:
-No trecho do código identificado como “coloque seu token”, insira o token do seu bot.
+
+No trecho do código identificado como TOKEN, substitua "SEU TOKEN" pelo token fornecido pelo BotFather ao criar o seu bot no Telegram.​
+
 
 Adição ao Grupo:
-Adicione o bot a um grupo do Telegram onde serão compartilhados os comprovantes de pagamento Pix.
 
-Envio dos Comprovantes:
-Para que o bot funcione corretamente, ao enviar um comprovante, inclua na legenda o valor correspondente ao comprovante.
+Adicione o bot ao grupo do Telegram onde os comprovantes de pagamento Pix serão compartilhados.​
 
 Permissões:
-Certifique-se de conceder todas as permissões necessárias para o funcionamento completo do bot no grupo.
 
-Início da Operação:
-Inicie o bot no grupo digitando o comando /start.
+Promova o bot a administrador do grupo e conceda-lhe as seguintes permissões:​
 
-Finalização e Totalização:
-Para encerrar as somas referentes ao dia, utilize o comando /total_hoje.
+Excluir mensagens: Necessária para que o bot possa remover mensagens conforme configurado.
+
+Outras permissões conforme necessário.
+
+Envio dos Comprovantes:
+
+Ao enviar um comprovante de pagamento Pix para o grupo, inclua na legenda da imagem o valor correspondente ao comprovante. O bot identificará e somará automaticamente os valores mencionados nas legendas.​
+
+Comandos Disponíveis:
+
+/start:
+
+Inicia o bot no grupo e prepara-o para receber e processar os comprovantes enviados.
+
+/total:
+
+Exibe o total acumulado dos valores processados até o momento. Após 30 segundos, tanto o comando quanto a resposta serão automaticamente apagados pelo bot.
+
+/limpar:
+
+Remove as últimas 100 mensagens do grupo. Utilize este comando com cautela, pois ele apagará mensagens recentes que podem ser importantes.
+
+Observações Importantes:
+
+Limitações de Exclusão de Mensagens:
+
+O Telegram permite que bots excluam apenas mensagens enviadas nos últimos dois dias (48 horas). Mensagens mais antigas não podem ser deletadas pelo bot.​
+
+Mensagens Fixadas:
+
+O comando /limpar pode não remover mensagens fixadas no grupo.​
+
+Responsabilidade no Uso:
+
+Utilize o comando /limpar com discernimento para evitar a remoção acidental de mensagens importantes.
